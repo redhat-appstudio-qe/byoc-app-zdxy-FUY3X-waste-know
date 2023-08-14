@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: gfdc
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: gfdc
+    app.kubernetes.io/part-of: byoc-app-zdxy
+  name: gfdc
+spec:
+  rules:
+  - host: gfdc-byoc-zerh-tenant.apps.230798ef11f15e01d91a.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: gfdc
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

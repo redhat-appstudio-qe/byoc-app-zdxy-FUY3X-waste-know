@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: gfdc
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: POC
+          value: POC
+        image: quay.io/redhat-appstudio-qe/byoc-zerh-tenant/byoc-app-zdxy/gfdc@sha256:19869887edc95bc196b00b1e385e3261aee542acae08a258a7d8ad0b29c582db
+        name: my-java-quarkus
+        resources: {}
+status: {}
