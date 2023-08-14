@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: gfdc
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-zerh-tenant/byoc-app-zdxy/gfdc@sha256:19869887edc95bc196b00b1e385e3261aee542acae08a258a7d8ad0b29c582db
         name: my-java-quarkus
         ports:
         - containerPort: 8081
